@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Hire professional virtual assistants for admin tasks, data entry, and customer support. Scalable solutions for growing businesses.">
+        content="Hire professional virtual assistants for admin tasks, sales, and customer support. Scalable solutions for busy businesses.">
     <title>Virtual Assistant Services | OmniCreed</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,69 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific page styles overlay */
+        .benefit-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .trust-strip-light {
+            background: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+            margin-bottom: 80px;
+        }
+
+        .trust-strip-content {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 12px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .benefit-icon {
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* Override for this page */
+        .service-card {
+            cursor: default;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,95 +90,232 @@
                     <li><a href="index.html#about">Why Us</a></li>
                 </ul>
             </nav>
-            <a href="index.html#contact" class="btn btn-primary btn-sm">Get Started</a>
+            <a href="#contact" class="btn btn-primary btn-sm">Get Started</a>
         </div>
     </header>
 
     <!-- Page Hero -->
-    <section class="hero-section" style="min-height: 60vh; padding-bottom: 60px;">
+    <section class="hero-section" style="min-height: 70vh; padding-bottom: 40px;">
         <div class="hero-bg-accent"
-            style="background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, rgba(10, 12, 16, 0) 70%);"></div>
+            style="background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, rgba(10, 12, 16, 0) 70%); top: -30%;">
+        </div>
         <div class="container hero-content">
-            <h1 class="hero-title">Professional <br><span class="text-gradient">Virtual Assistants</span></h1>
-            <p class="hero-subtitle">Reclaim your time with dedicated remote professionals who handle your daily
-                operations with precision and reliability.</p>
+            <span class="benefit-tag">Reliable Remote Staffing</span>
+            <h1 class="hero-title">Virtual Assistant Services <br>for <span class="text-gradient">Busy Businesses</span>
+            </h1>
+            <p class="hero-subtitle">Get expert support, save time, and scale operations with dedicated virtual
+                assistants tailored to your needs.</p>
             <div class="hero-cta-group">
-                <a href="#va-pricing" class="btn btn-primary">View Plans</a>
+                <a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
+                <a href="#capabilities" class="btn btn-secondary">See What We Do</a>
             </div>
         </div>
     </section>
 
-    <!-- Services Detail -->
-    <section class="services-section" style="padding-top: 0;">
+    <!-- Trust Strip -->
+    <div class="trust-strip-light">
+        <div class="container trust-strip-content">
+            <div class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
+                Trusted by growing businesses
+            </div>
+            <div class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+                Rated 4.9+ by clients
+            </div>
+            <div class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                </svg>
+                Fast onboarding
+            </div>
+        </div>
+    </div>
+
+    <!-- Capabilities Section -->
+    <section id="capabilities" class="services-section" style="padding-top: 0;">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">What Our VAs Do</h2>
-                <p class="section-desc">From administrative tasks to specialized support, we cover it all.</p>
+                <h2 class="section-title">What Our Virtual Assistants Do</h2>
+                <p class="section-desc">Specialized support designed to integrate with your workflow.</p>
             </div>
 
             <div class="services-grid">
-                <div class="service-card" style="cursor: default;">
-                    <h3>Administrative Support</h3>
-                    <p>Calendar management, email handling, appointment scheduling, and travel arrangements.</p>
+                <!-- Role 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 7h-9m3 10H5m16-5h-9m9-3H9m-2 8H5m2-3H5m2-3H5" />
+                        </svg>
+                    </div>
+                    <h3>Admin & Executive Support</h3>
+                    <p>Calendar management, inbox organization, travel coordination.</p>
                 </div>
-                <div class="service-card" style="cursor: default;">
-                    <h3>Data Entry & Research</h3>
-                    <p>Accurate data processing, market research, lead generation lists, and CRM updates.</p>
+                <!-- Role 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                        </svg>
+                    </div>
+                    <h3>Sales & CRM Support</h3>
+                    <p>Lead follow-ups, CRM updates, appointment setting.</p>
                 </div>
-                <div class="service-card" style="cursor: default;">
+                <!-- Role 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                    </div>
                     <h3>Customer Support</h3>
-                    <p>Live chat support, ticket management, and email responses to keep your customers happy.</p>
+                    <p>Email & live chat support, FAQ handling, billing support.</p>
                 </div>
-                <div class="service-card" style="cursor: default;">
-                    <h3>Social Media Mgmt</h3>
-                    <p>Scheduling posts, engaging with comments, and basic content moderation.</p>
+                <!-- Role 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 6l-9.5 9.5-5-5L1 18" />
+                            <path d="M17 6h6v6" />
+                        </svg>
+                    </div>
+                    <h3>Marketing Assistance</h3>
+                    <p>Social posting, research & tracking, basic graphics.</p>
+                </div>
+                <!-- Role 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 11 12 14 22 4" />
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                        </svg>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p>Task tracking, reporting, workflow coordination.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Hire VA Section -->
-    <section class="trust-strip" style="background: var(--bg-card); padding: 80px 0; border: none;">
-        <div class="container" style="display: block;">
+    <!-- Why Choose Us -->
+    <section class="why-us-section" style="padding: 80px 0; background: var(--bg-dark);">
+        <div class="container" style="max-width: 1000px;">
             <div class="section-header">
-                <h2 class="section-title">Why Outsourcing Works</h2>
+                <h2 class="section-title">Why Choose Our VAs</h2>
             </div>
-            <div class="trust-metrics" style="justify-content: center; width: 100%; text-align: center;">
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <strong>Dedicated Assistants</strong>
+                        <p style="font-size: 14px; color: var(--text-muted);">Aligned specifically with your workflow
+                            and company culture.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <strong>Trained Professionals</strong>
+                        <p style="font-size: 14px; color: var(--text-muted);">Pre-vetted and skilled in modern digital
+                            tools.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <strong>Flexible Support</strong>
+                        <p style="font-size: 14px; color: var(--text-muted);">Part-time or full-time models that scale
+                            with you.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <strong>Tool Integration</strong>
+                        <p style="font-size: 14px; color: var(--text-muted);">We use your email, CRM, calendar, and task
+                            apps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <h4>Chat with Us</h4>
+                    <p>We tailor support to your exact business needs.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <h4>Match with Best VA</h4>
+                    <p>Handpicked specialized talent for your role.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <h4>Get Started</h4>
+                    <p>Onboard quickly & start achieving results instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Snapshot -->
+    <section class="trust-strip" style="background: var(--bg-card); padding: 80px 0; border: none;">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 40px;">
+                <h2 class="section-title">Real Business Impact</h2>
+            </div>
+            <div class="trust-metrics" style="justify-content: center; gap: 60px; flex-wrap: wrap;">
                 <div class="metric-item" style="flex-direction: column; text-align: center;">
-                    <span class="metric-value">40%</span>
-                    <span class="metric-desc">Cost Savings vs Hiring Locally</span>
+                    <span class="metric-value">Save Time</span>
+                    <span class="metric-desc">Cut administrative workload</span>
                 </div>
                 <div class="metric-item" style="flex-direction: column; text-align: center;">
-                    <span class="metric-value">24/7</span>
-                    <span class="metric-desc">Potential Coverage</span>
+                    <span class="metric-value">Focus</span>
+                    <span class="metric-desc">Strategic growth, not tasks</span>
                 </div>
                 <div class="metric-item" style="flex-direction: column; text-align: center;">
-                    <span class="metric-value">0</span>
-                    <span class="metric-desc">Overhead Costs</span>
+                    <span class="metric-value">Reduce Cost</span>
+                    <span class="metric-desc">vs In-house hiring</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section id="va-pricing" class="cta-section">
+    <section id="contact" class="cta-section">
         <div class="cta-bg-glimmer"></div>
         <div class="container cta-content">
-            <h2 class="cta-title">Ready to hire your Assistant?</h2>
-            <p class="cta-text">Get matched with a professional VA within 48 hours.</p>
-            <a href="mailto:contact@omnicreed.com?subject=Hiring Virtual Assistant" class="btn btn-primary btn-lg">Start
-                Hiring</a>
+            <h2 class="cta-title">Ready to Get Support That Scales?</h2>
+            <p class="cta-text">Let’s talk about how our virtual assistants can help you grow.</p>
+            <a href="mailto:contact@omnicreed.com?subject=VA Consultation" class="btn btn-primary btn-lg">Schedule Your
+                Call</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="index.html" class="logo footer-logo">OmniCreed</a>
-                <p class="footer-tagline">Smart Digital Services.</p>
-            </div>
-            <div class="footer-bottom" style="grid-column: 1 / -1; border-top: none; padding-top: 0;">
+        <div class="container footer-grid"
+            style="grid-template-columns: 1fr; text-align: center; gap: 24px; margin-bottom: 24px;">
+            <div class="footer-bottom" style="border: none; padding: 0;">
+                <p style="margin-bottom: 12px;">FAQs • Support • Tools We Work With</p>
                 <p>&copy; 2026 OmniCreed. All rights reserved.</p>
             </div>
         </div>
