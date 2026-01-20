@@ -39,6 +39,8 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+    /* Account for fixed header + spacing */
 }
 
 body {
@@ -593,17 +595,7 @@ ul {
     width: 180px;
 }
 
-/* CTA Section */
-.cta-section {
-    padding: 100px 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    margin: 60px 24px;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #1e3a8a 0%, #000000 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
+/* Removed old cta-section styles to avoid duplication, new definition is below */
 
 .cta-bg-glimmer {
     position: absolute;
@@ -629,6 +621,69 @@ ul {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 40px;
+}
+
+/* Detailed Contact Form */
+.contact-form-detailed {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: white;
+    font-size: 14px;
+    font-family: var(--font-sans);
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.cta-section {
+    padding: 40px 0;
+    margin: 30px 24px;
+    border-radius: 16px;
+    /* Elegant dark background instead of harsh blue */
+    background: linear-gradient(145deg, #0f1218 0%, #050608 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .cta-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 /* Footer */
