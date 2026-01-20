@@ -139,7 +139,10 @@ ul {
     width: 94%;
     max-width: 1200px;
     height: var(--header-height);
-    background: rgba(10, 12, 16, 0.6);
+
+    /* Default background */
+    background-color: rgba(10, 12, 16, 0.6);
+
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
@@ -150,7 +153,7 @@ ul {
 }
 
 .site-header.scrolled {
-    background: rgba(10, 12, 16, 0.95);
+    background-color: rgba(10, 12, 16, 0.95);
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
     border-color: rgba(255, 255, 255, 0.15);
     top: 10px;
