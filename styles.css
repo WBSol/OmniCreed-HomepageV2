@@ -128,17 +128,29 @@ ul {
 /* Header */
 .site-header {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 0;
-    width: 100%;
+    right: 0;
+    margin: 0 auto;
+    width: 94%;
+    max-width: 1200px;
     height: var(--header-height);
-    background: rgba(10, 12, 16, 0.8);
+    background: rgba(10, 12, 16, 0.6);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
     z-index: 1000;
     display: flex;
     align-items: center;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(10, 12, 16, 0.95);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.15);
+    top: 10px;
+    /* Subtle movement on scroll or stay at 20px? Let's keep it at 20px or tighter */
 }
 
 .header-container {
