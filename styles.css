@@ -313,7 +313,10 @@ ul {
     padding: 40px;
     border-radius: 16px;
     transition: all 0.3s ease;
-    cursor: default;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .service-card:hover {
